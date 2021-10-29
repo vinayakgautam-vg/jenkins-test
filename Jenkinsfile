@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'                 
-                sh 'sudo apt install docker.io -y'
             }
         }
         stage('Test') {
