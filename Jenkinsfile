@@ -5,11 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..' 
-                   sh '#!/bin/bash' 
-                   sh 'sudo echo "building a container" ' 
-                   sh 'sudo apt update -y' 
-                   sh 'sudo apt install docker.io -y' 
-                   sh 'sudo docker build -t myimage . '
+                  
+                   bash '#!/bin/bash sudo docker build -t myimage . '
                    
             }
         }
