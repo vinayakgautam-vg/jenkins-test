@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..' 
                   
-                   bash '#!/bin/bash sudo docker build -t myimage . '
+                   sh '#!/bin/sh sudo docker build -t myimage . '
                    
             }
         }
