@@ -7,9 +7,9 @@ pipeline {
                 echo 'Building..' 
                     
                    sh 'echo "building a container" ' 
-                   sh 'sudo apt update -y' 
-                   sh 'sudo apt install docker.io -y' 
-                   sh 'sudo docker build -t myimage . '
+                   sh 'apt update -y' 
+                   sh 'apt install docker.io -y' 
+                   sh 'docker build -t myimage . '
                    
             }
         }
@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'sudo docker run -it -d --name mycontainer -p 80:80 myimage'
+                sh 'docker run -it -d --name mycontainer -p 80:80 myimage'
            }
         }
     }
