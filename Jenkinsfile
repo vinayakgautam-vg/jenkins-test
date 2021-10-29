@@ -5,8 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'                 
-            }
-            steps { 
                 sh 'docker --version'
             }
         }
