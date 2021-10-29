@@ -5,9 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..' 
-                   sh('apt update -y')
-                   sh('apt install docker.io -y')
-                   sh('docker build -t myimage . ')
+                   sh('sudo apt update -y')
+                   sh('sudo apt install docker.io -y')
+                   sh('sudo docker build -t myimage . ')
                    
             }
         }
